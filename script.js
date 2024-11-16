@@ -12,6 +12,8 @@ const secondPasswordEl = document.getElementById("second-password-el");
 const lengthInputEl = document.getElementById("length-input-el");
 const numbersSwitchEl = document.querySelector("#numbers-switch-el input");
 const symbolsSwitchEl = document.querySelector('#symbols-switch-el input');
+
+const generatePasswordsBtn = document.getElementById("generate-btn");
 const MAX_PASSWORD_LENGTH = 15;
 
 
@@ -19,6 +21,10 @@ document.body.addEventListener("keypress", function(event) {
   if (event.key === "Enter") {
     renderPasswords();
   }
+});
+
+generatePasswordsBtn.addEventListener("click", () => {
+  renderPasswords();
 });
 
 numbersSwitchEl.addEventListener("change", () => {
@@ -61,6 +67,7 @@ function removeAdditionalCharacters(expiredCharacters) {
 
 function renderPasswords() {
   const passwordLength = getPasswordLength();
+  
 
   if (passwordLength > MAX_PASSWORD_LENGTH) {
     lengthInputEl.value = "";
@@ -80,6 +87,9 @@ function renderPasswords() {
 
   firstPasswordEl.append(firstPassword, firstTooltipImage);
   secondPasswordEl.append(secondPassword, secondTooltipImage);
+
+
+  firstPasswordEl.focus();
 }
 
 function getPasswordLength() {

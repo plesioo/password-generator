@@ -12,37 +12,40 @@
 </head>
 <body>
   <main>
-    <h1>Generate a <span style="color: lightgreen;">random password</span></h1>
-    <h2>Never use an insecure password again.</h3>
-    <section id="password-controls">
-      <button onclick="renderPasswords()" id="generate-btn">Generate passwords</button>
+    <header>
+      <h1>Generate a <span style="color: lightgreen;">random password</span></h1>
+      <h2>Never use an insecure password again.</h2>
+    </header>
+
+    <section class="password-controls">
+      <button id="generate-btn">Generate passwords</button>
       <div>
-        <p>Length:</p>
+        <label for="length-input-el">Length:</label>
         <input type="text" placeholder="12" id="length-input-el">
       </div>
     </section>
-    <hr class="rounded">
+    <hr class="rounded" aria-hidden="true">
 
     <section id="toggle-container">
       <div>
-        <p>Numbers</p>
-        <label class="switch" id="numbers-switch-el">
+        <p id="numbers-label">Include Numbers</p>
+        <label class="switch" id="numbers-switch-el" tabindex="0" aria-labelledby="numbers-label">
           <input type="checkbox">
           <span class="slider round"></span>
         </label>
       </div>
       <div>
-        <p>Symbols</p>
-        <label class="switch" id="symbols-switch-el">
+        <p id="symbols-label">Include Symbols</p>
+        <label class="switch" id="symbols-switch-el" tabindex="0" aria-labelledby="symbols-label">
           <input type="checkbox">
           <span class="slider round"></span>
         </label>
       </div>
     </section>
 
-    <section id="passwords-hero">
-      <p id="first-password-el"></p>
-      <p id="second-password-el"></p>
+    <section id="passwords-hero" aria-labelledby="generate-btn">
+      <p id="first-password-el" aria-live="polite" tabindex="0"></p>
+      <p id="second-password-el" aria-live="polite" tabindex="0"></p>
     </section>
   </main>
   <script src="script.js"></script>

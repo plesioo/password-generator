@@ -20,7 +20,7 @@ main {
 
 h1 {
   font-weight: 800;
-  font-size: 60px;
+  font-size: 4rem;
   display: inline-block;
   margin-bottom: 15px;
 }
@@ -31,7 +31,7 @@ h1 span {
 
 h2 {
   color: #D5D4D8;
-  font-size: 30px;
+  font-size: 2rem;
   font-family: "Inter";
   font-weight: 400;
   margin-bottom: 75px;
@@ -44,7 +44,7 @@ h2 {
   padding: 15px 30px;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
@@ -53,7 +53,7 @@ input {
   text-align: center;
   padding: 16px 2px;
   background-color: #273549;
-  font-size: 24px;
+  font-size: 1.5rem;
   width: 60px;
   color: white;
   border-radius: 6px;
@@ -62,19 +62,20 @@ input {
 input:focus {
   outline: none;
 }
-#password-controls {
+
+.password-controls {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 45px;
 }
 
-#password-controls p {
-  font-size: 24px;
+.password-controls label {
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
-#password-controls div {
+.password-controls div {
   display: flex;
   align-items: center;
   column-gap: 15px;
@@ -131,7 +132,7 @@ hr {
   display: flex;
   align-items: center;
   column-gap: 10px;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: bold;
 }
 
